@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4.1.1
+        with:
+          submodules: 'recursive'
 
       - name: Set-up MSBuild in PATH
         uses: microsoft/setup-msbuild@v1.3.1
