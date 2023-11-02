@@ -28,3 +28,12 @@ jobs:
 
       - name: Build
         run: msbuild -m .\Source\slw-dlc-restoration\slw-dlc-restoration.sln
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: |
+            build/
+            Debug/
+            bin/
+            x86/
